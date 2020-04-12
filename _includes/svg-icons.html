@@ -1,0 +1,11 @@
+{% if site.footer-links.email %}
+    <a href="mailto:{{ site.footer-links.email }}">email</a>
+{% endif %}
+
+{% if site.footer-links.github %}
+    <a href="https://github.com/{{ site.footer-links.github }}">github</a>
+{% endif %}
+
+{% if site.footer-links.rss %}
+    <a href="{{ site.baseurl }}/feed.xml">rss</a>
+{% endif %}

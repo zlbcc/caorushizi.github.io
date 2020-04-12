@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="post">
+    <date class="post-time">{{ page.date | date_to_string: "ordinal", "US" }}</date>
+    <header>
+        <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+
+    <div class="post-content" id="write">
+        {{ content }}
+    </div>
+
+    {% include vcomments.html %}
+
+</article>
