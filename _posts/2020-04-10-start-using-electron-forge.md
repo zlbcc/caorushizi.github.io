@@ -11,6 +11,7 @@ tags: ["泰康日记", "前端"]
 
 - electron forge 内置模板
 - 使用 typescript webpack 模板初始化项目
+
 ```bash
 npx create-electron-app my-new-app --template=typescript-webpack
 ```
@@ -18,6 +19,7 @@ npx create-electron-app my-new-app --template=typescript-webpack
 
 添加 eslint
 ---
+
 ```bash
 npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
