@@ -13,11 +13,11 @@ jobs:
       - name: 测试当前所处的文件夹
         run: pwd
       - name: 安装 Ruby 2.6
-          uses: actions/setup-ruby@v1
-          with:
-            ruby-version: 2.6
-              - name: 使用 gem 安装 github-pages
-                run: gem install github-pages
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+      - name: 使用 gem 安装 github-pages
+        run: gem install github-pages
       - name: 构建静态文件
         run: jekyll build
       - name: 列出所有文件
