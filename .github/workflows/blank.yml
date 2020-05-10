@@ -18,7 +18,7 @@ jobs:
         with:
           go-version: '^1.13.1'
       - name: 构建 qshell
-        run: go build main.go -o qshell
+        run: go build -o qshell main.go
       - name: 添加 artifact
         uses: actions/upload-artifact@v2
         with:
