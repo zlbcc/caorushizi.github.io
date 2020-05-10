@@ -20,7 +20,7 @@ jobs:
       - name: 构建 qshell
         run: go build main.go
       - name: 列出所有文件
-        run: cd _site && ls -a
+        run: ls -a
   deploy:
     runs-on: ubuntu-latest
     steps:
