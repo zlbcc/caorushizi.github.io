@@ -1,4 +1,4 @@
-name: CI
+name: 自动化部署博客到七牛云
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         with:
           name: qshell
           path: qshell
-  build:
+  gen-blog-static-file:
     runs-on: ubuntu-latest
     steps:
       - name: 将 master 分支检出
@@ -38,8 +38,6 @@ jobs:
         run: gem install github-pages
       - name: 构建静态文件
         run: jekyll build
-      - name: 列出目录文件
-        run: ls
       - name: 将 _site 文件夹重命名为 site ，并压缩该文件夹
         run: mv _site site && zip -r site.zip site
       - name: 添加 artifact
