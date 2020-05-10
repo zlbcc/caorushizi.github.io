@@ -62,9 +62,9 @@ jobs:
         with:
           name: site.zip
       - name: 将网站静态文件解压
-        run: ls -a && unzip ./site
-      - name: 列出所有文件
-        run: ls
+        run: unzip ./site
+      - name: 将 404 文件修改
+        run: mv ./site/errno-404.html ./site/errno-404
       - name: 使用 qshell 执行上传命令
         run: |
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile
