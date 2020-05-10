@@ -71,5 +71,5 @@ jobs:
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile
           ./qshell listbucket zy-blogfile -o zy-blogfile.list.txt
           cat zy-blogfile.list.txt
-          ./qshell qupload2 --src-dir=./site --bucket=zy-blogfile
+          ./qshell qupload2 --src-dir=./site --bucket=zy-blogfile --overwrite-list=zy-blogfile.list.txt
 
