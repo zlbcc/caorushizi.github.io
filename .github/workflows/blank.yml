@@ -5,25 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build-qshell:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 将 qshell 源码检出
-        uses: actions/checkout@v2
-        with:
-          repository: 'qiniu/qshell'
-          ref: 'v2.4.0'
-      - name: 安装 Go 1.13.1
-        uses: actions/setup-go@v2
-        with:
-          go-version: '^1.13.1'
-      - name: 构建 qshell
-        run: go build main.go
-      - name: 列出所有文件
-        run: ls -a
-      - name: pwd
-        run: pwd
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: 将 master 分支检出
@@ -38,6 +20,12 @@ jobs:
         run: gem install github-pages
       - name: 构建静态文件
         run: jekyll build
+      - name: 列出目录文件
+        run: ls
+      - name: 下载 qshell 可执行文件
+        run: |
+          wget http://devtools.qiniu.com/qshell-linux-x64-v2.4.1.zip?ref=developer.qiniu.com -O qshell.zip
+          unzip qshell.zip | mv `unzip -l qshell.zip | awk '{if(NR == 4){ print $4}}'` qshell
       - name: 列出目录文件
         run: ls
 
