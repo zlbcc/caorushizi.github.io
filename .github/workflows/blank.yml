@@ -68,8 +68,8 @@ jobs:
         run: ls
       - name: 使用 qshell 执行上传命令
         run: |
-          ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile
-          ./qshell listbucket zy-blogfile -o zy-blogfile.list.txt
-          cat zy-blogfile.list.txt
-          ./qshell qupload2 --src-dir=./site --bucket=zy-blogfile --overwrite-list=zy-blogfile.list.txt
+          qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile
+          qshell listbucket zy-blogfile -o zy-blogfile.list.txt
+          qshell batchdelete --force zy-blogfile -i zy-blogfile.list.txt
+          qshell qupload2 --src-dir=./site --bucket=zy-blogfile
 
