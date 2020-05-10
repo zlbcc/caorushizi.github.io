@@ -63,5 +63,5 @@ jobs:
           name: site.zip
           path: site.zip
       - name: 列出目录文件
-          run: ls
+        run: ls
 
