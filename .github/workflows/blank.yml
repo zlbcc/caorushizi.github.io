@@ -11,7 +11,7 @@ jobs:
       - name: 将 qshell 源码检出
         uses: actions/checkout@v2
         with:
-          repository: 'https://github.com/qiniu/qshell'
+          repository: 'qiniu/qshell'
           ref: 'v2.4.0'
       - name: 安装 Go 1.13.1
         uses: actions/setup-go@v2
