@@ -58,10 +58,10 @@ jobs:
           name: qshell
           path: qshell
       - name: 下载生成的静态文件
-          uses: actions/download-artifact@v2
-          with:
-            name: site.zip
-            path: site.zip
+        uses: actions/download-artifact@v2
+        with:
+          name: site.zip
+          path: site.zip
       - name: 列出目录文件
           run: ls
 
