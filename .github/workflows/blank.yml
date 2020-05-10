@@ -13,6 +13,8 @@ jobs:
     - name: test
       run: pwd
     - name: 使用 github-pages
-      run: gem install github-pages && jekyll build
+      run: gem install github-pages
+    - name: 构建静态文件
+      run: jekyll build
     - name: 列出所有文件
       run: cd _site && ls -a
