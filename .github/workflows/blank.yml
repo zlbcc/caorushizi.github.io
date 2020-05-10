@@ -42,7 +42,7 @@ jobs:
       - name: 列出目录文件
         run: ls
       - name: 将 _site 文件夹重命名为 site ，并压缩该文件夹
-        run: mv _site site && zip -r site site
+        run: mv _site site && zip -r site.zip site
       - name: 添加 artifact
         uses: actions/upload-artifact@v2
         with:
@@ -56,12 +56,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: qshell
-          path: qshell
       - name: 下载生成的静态文件
         uses: actions/download-artifact@v2
         with:
           name: site.zip
-          path: site.zip
       - name: 将网站静态文件解压
         run: ls -a && unzip ./site
       - name: 列出所有文件
