@@ -33,13 +33,13 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: #000 !important;
+  background: #eee !important;
 }
 
 ::selection {
-  color: #000;
-  background: #eee;
+  color: #000 !important;
+  background: #eee !important;
 }
 
 /*********************/
