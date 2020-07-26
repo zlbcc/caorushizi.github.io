@@ -1,23 +1,9 @@
 @charset "utf-8";
 
-:root {
-    --active-file-bg-color: #dadada;
-    --active-file-bg-color: rgba(32, 43, 51, 0.63);
-    --active-file-text-color: white;
-    --bg-color: #fff;
-    --text-color: #333;
-    --side-bar-bg-color: #f5f5f5;
-    --control-text-color: #666;
-}
-
 #write {
     min-height: calc(100vh - 6em);
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
-}
-
-.typora-node #write {
-    min-height: calc(100% - 6em);
 }
 
 pre.md-meta-block {
@@ -39,7 +25,7 @@ pre.md-meta-block {
 
 @media screen and (min-width: 1100px) {
     body, #footer-word-count-info {
-        background: #f5f5f5;
+        background: #fff;
     }
 
     body.pin-outline,
@@ -65,7 +51,7 @@ pre.md-meta-block {
     body.pin-outline,
     .pin-outline #footer-word-count-info,
     .pin-outline footer {
-        background: #f5f5f5;
+        background: #fff;
     }
 
     .pin-outline #write {
@@ -78,7 +64,7 @@ pre.md-meta-block {
     }
 
     #footer-word-count-info {
-        background: #f5f5f5;
+        background: #fff;
     }
 }
 
@@ -111,13 +97,8 @@ body, button, input, select, textarea {
     font: 300 1em/1.8 "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 }
 
-body {
-    font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
-}
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "TimesNewRomanPS-ItalicMT", "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
-    /*font-family: "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;*/
     -webkit-font-smoothing: initial;
     font-weight: 100;
     color: var(--text-color);
@@ -291,10 +272,11 @@ html {
 /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6,
 #write-h1, #write-h2, #write-h3, #write-h4, #write-h5, #write-h6 {
-    margin-top: 1.2em;
-    margin-bottom: 0.6em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     line-height: 1.35;
     color: #000;
+    font-weight: bold;
 }
 
 #write h1, #write-h1 {
@@ -308,11 +290,11 @@ html {
 }
 
 #write h3, #write-h3 {
-    font-size: 1.6em;
+    font-size: 1.17em;
 }
 
 #write h4, #write-h4 {
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 
 #write h5, #write h6, #write-h5, #write-h6 {
@@ -370,7 +352,7 @@ html {
 }
 
 li > p {
-    margin-bottom: 0 !important;
+    margin-bottom: 1em;
 }
 
 /* Responsive images */

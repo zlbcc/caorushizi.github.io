@@ -8,5 +8,5 @@ gem install github-pages
 ```
 - 本地运行
 ```shell script
-jekyll server --port=3001
+jekyll server
 ```

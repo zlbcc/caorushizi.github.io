@@ -4,16 +4,14 @@
 //
 // IMPORTS
 //
-@import "reset";
 @import "variables";
-@import "./theme.css";
 
 // Syntax highlighting @import is at the bottom of this file
 /**************/
 /* BASE RULES */
 /**************/
 body {
-  background-color: #FFF;
+  background-color: #fff;
   color: #444;
   line-height: 1.5;
 }
@@ -35,13 +33,13 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: #000 !important;
+  background: #eee !important;
 }
 
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: #000 !important;
+  background: #eee !important;
 }
 
 /*********************/
@@ -316,4 +314,5 @@ img {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "post-theme";
 @import "highlights";
