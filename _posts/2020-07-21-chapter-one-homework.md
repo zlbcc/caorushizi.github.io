@@ -6,15 +6,13 @@ categories: ["大前端"]
 tags: ["泰康日记", "do homework"]
 ---
 
-# 简答题
----
+### 简答题
 
 - 谈谈你是如何理解JS异步编程的，EventLoop、消息队列都是做什么的，什么是宏任务，什么是微任务？
 
-# 代码题
----
+### 代码题
 
-## 一、将下面的异步代码使用Promise的方式改进
+#### 一、将下面的异步代码使用Promise的方式改进
 
 ```js
 setTimeout(function () {
@@ -29,7 +27,7 @@ setTimeout(function () {
 }, 10)
 ```
 
-## 二、基于以下代码完成下面的四个练习
+#### 二、基于以下代码完成下面的四个练习
 ```js
 const fp = require('lodash/fp')
 // 数据
@@ -71,7 +69,7 @@ let averageDollarValue = function(cars){
 let _underscore = fp.replace(/\W+/g, '_') // <-- 无须改动，并在sanitizeNames 中使用它
 ```
 
-## 三、基于下面提供的代码，完成后续的四个练习 
+#### 三、基于下面提供的代码，完成后续的四个练习 
 
 ```js
 
@@ -165,7 +163,7 @@ return parseInt(n)
 }
 ```
 
-## 四、手写实现 MyPromise 源码
+#### 四、手写实现 MyPromise 源码
 
 要求：尽可能还原Promise中的每一个API，并通过注视的方式描述思路和原理
 
