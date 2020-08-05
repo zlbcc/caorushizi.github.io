@@ -16,7 +16,6 @@ tags: ["泰康日记", "前端"]
 npx create-electron-app my-new-app --template=typescript-webpack
 ```
 
-
 添加 eslint
 ---
 
@@ -26,9 +25,8 @@ npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
 prettier
 ---
+
 。
 
 rem
 ---
-
-

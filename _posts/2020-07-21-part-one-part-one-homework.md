@@ -47,6 +47,7 @@ function genPromise (text) {
 ```
 
 #### 二、基于以下代码完成下面的四个练习
+
 ```js
 const fp = require('lodash/fp')
 // 数据
@@ -60,7 +61,9 @@ const cars = [
     { name: 'Pagani Huayra', horsepower: 700, dollar_value: 1300000, in_stock: false },
 ]
 ```
+
 - 练习1：使用函数组合 fp.flowRight() 重新实现下面这个函数
+
 ```js
 let isLastInStock = function (cars) {
     // 获取最后一条数据
@@ -81,8 +84,9 @@ console.log(isLastInStock(cars));
 const lastCarName = fp.flowRight(fp.prop("name"), fp.first);
 console.log(lastCarName(cars));
 ```
-    
+
 - 练习3：使用帮助函数 _average 重构 averageDollarValue， 使用函数组合的方式实现
+
 ```js
 let _average = function (xs) {
   return fp.reduce(fp.add, 0, xs) / xs.length
@@ -103,6 +107,7 @@ const averageDollarValue = fp.flowRight(_average, dollar_value);
 ```
 
 - 练习4：使用flowRight写一个sanitizeNames()函数，返回一个下划线连接的小写字符串，把数组中的 name 转换为这种形式：例如：sanitizeNames(["Hello World"]) => ['hello_world']
+
 ```js
 let _underscore = fp.replace(/\W+/g, '_') // <-- 无须改动，并在 sanitizeNames 中使用它
 ```
@@ -111,7 +116,7 @@ let _underscore = fp.replace(/\W+/g, '_') // <-- 无须改动，并在 sanitizeN
 const sanitizeNames = fp.map(fp.flowRight(_underscore, fp.toLower));
 ```
 
-#### 三、基于下面提供的代码，完成后续的四个练习 
+#### 三、基于下面提供的代码，完成后续的四个练习
 
 ```js
 // support.js
@@ -151,7 +156,7 @@ module.exports = { Maybe, Container }
 ```
 
 - 练习1：使用fp.add(x,y) 和 fp.map(f, x)创建一个能让 functor 里的值增加的函数ex1
-    
+
 ```js
 // app.js
 const fp = require('lodash/fp')
@@ -168,7 +173,7 @@ maybe.map(addSome).map(console.log);
 ```
 
 - 练习2：实现一个函数 ex2， 能够使用 fp.first 获取列表中的第一个元素
-    
+
 ```js
 // app.js
 const fp = require('lodash/fp')
@@ -184,7 +189,7 @@ xs.map(fp.first).map(console.log);
 ```
 
 - 练习3：实现一个函数ex3，使用safeProp和fp.first 找到user的名字和首字母
-    
+
 ```js
 // app.js
 const fp = require('lodash/fp')
@@ -203,7 +208,7 @@ safeProp("name", user).map(fp.first).map(console.log)
 ```
 
 - 练习4： 使用Maybe重写 ex4 ，不要有 if 语句
-    
+
 ```js
 // app.js
 const fp = require('lodash/fp')
@@ -241,7 +246,7 @@ export default class MyPromise {
     }
   }
 
-  // promsie 状态 
+  // promsie 状态
   status = PENDING
   // 成功之后的值
   value = undefined
@@ -286,8 +291,8 @@ export default class MyPromise {
           try {
             let x = successCallback(this.value)
             // 判断 x 的值是普通值还是promise对象
-            // 如果是普通值 直接调用resolve 
-            // 如果是promise对象 查看promsie对象返回的结果 
+            // 如果是普通值 直接调用resolve
+            // 如果是promise对象 查看promsie对象返回的结果
             // 再根据promise对象返回的结果 决定调用resolve 还是调用reject
             resolvePromise(promsie2, x, resolve, reject)
           } catch (e) {
@@ -299,8 +304,8 @@ export default class MyPromise {
           try {
             let x = failCallback(this.reason)
             // 判断 x 的值是普通值还是promise对象
-            // 如果是普通值 直接调用resolve 
-            // 如果是promise对象 查看promsie对象返回的结果 
+            // 如果是普通值 直接调用resolve
+            // 如果是promise对象 查看promsie对象返回的结果
             // 再根据promise对象返回的结果 决定调用resolve 还是调用reject
             resolvePromise(promsie2, x, resolve, reject)
           } catch (e) {
@@ -315,8 +320,8 @@ export default class MyPromise {
             try {
               let x = successCallback(this.value)
               // 判断 x 的值是普通值还是promise对象
-              // 如果是普通值 直接调用resolve 
-              // 如果是promise对象 查看promsie对象返回的结果 
+              // 如果是普通值 直接调用resolve
+              // 如果是promise对象 查看promsie对象返回的结果
               // 再根据promise对象返回的结果 决定调用resolve 还是调用reject
               resolvePromise(promsie2, x, resolve, reject)
             } catch (e) {
@@ -329,8 +334,8 @@ export default class MyPromise {
             try {
               let x = failCallback(this.reason)
               // 判断 x 的值是普通值还是promise对象
-              // 如果是普通值 直接调用resolve 
-              // 如果是promise对象 查看promsie对象返回的结果 
+              // 如果是普通值 直接调用resolve
+              // 如果是promise对象 查看promsie对象返回的结果
               // 再根据promise对象返回的结果 决定调用resolve 还是调用reject
               resolvePromise(promsie2, x, resolve, reject)
             } catch (e) {
@@ -400,5 +405,3 @@ function resolvePromise (promsie2, x, resolve, reject) {
   }
 }
 ```
-
-
