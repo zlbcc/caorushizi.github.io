@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="post">
-    <date class="post-time">{{ page.date | date_to_string: "ordinal", "US" }}</date>
+    <div class="post-time">{{ page.date | date: "%Y年%m月%d日" }}</div>
     <header>
         <h1 class="post-title">{{ page.title }}</h1>
     </header>
