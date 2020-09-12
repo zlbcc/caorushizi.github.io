@@ -6,17 +6,17 @@
   {% include meta.html %}
 
   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="/assets/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css"/>
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
         href="{{ site.baseurl }}/feed.xml"/>
-  <script src="/assets/js/Valine.min.js"></script>
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/valine/1.4.9/Valine.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,8 @@
       </div>
 
       <nav>
-        {% if page.name == "index.html" %}
+
+        {% if page.name != "archive.html" or page.name != "categories.html" or page.name != "tags.html" or page.name != "about.html" %}
           <a class="current" href="{{ site.baseurl }}/">博客</a>
         {% else %}
           <a href="{{ site.baseurl }}/">博客</a>
