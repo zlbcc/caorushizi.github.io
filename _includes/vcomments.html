@@ -1,12 +1,10 @@
 {% if site.vcomments %}
-  <div class="container">
-    <div id="vcomments"></div>
-    <script>
-      new Valine({
-        el: '#vcomments',
-        appId: '9rMjHbYxMgvBJNYyuIwaCM7N-gzGzoHsz',
-        appKey: 'ELMy5VeLOUE8evOKpQymntcI'
-      })
-    </script>
-  </div>
+<div id="vcomments" style="margin-top: 20px;"></div>
+<script>
+new Valine({
+  el: '#vcomments',
+  appId: '9rMjHbYxMgvBJNYyuIwaCM7N-gzGzoHsz',
+  appKey: 'ELMy5VeLOUE8evOKpQymntcI'
+})
+</script>
 {% endif %}
