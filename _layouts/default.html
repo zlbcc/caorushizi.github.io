@@ -27,7 +27,7 @@
 
       <nav>
 
-        {% if page.name != "archive.html" or page.name != "categories.html" or page.name != "tags.html" or page.name != "about.html" %}
+        {% if page.name != "archive.html" and page.name != "categories.html" and page.name != "tags.html" and page.name != "about.html" %}
           <a class="current" href="{{ site.baseurl }}/">博客</a>
         {% else %}
           <a href="{{ site.baseurl }}/">博客</a>

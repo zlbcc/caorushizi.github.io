@@ -153,11 +153,6 @@ img {
 // .main
 //
 #main {
-  display: grid;
-  grid-template-columns: 1fr;
-  @include mobile {
-    grid-template-columns: 1fr 0;
-  }
 }
 
 
@@ -286,16 +281,23 @@ img {
     flex-direction: row;
 
     h3 {
+      overflow: hidden;
       width: 100px;
       max-width: 100px;
       min-width: 100px;
       font-size: 17px;
       color: #444;
       padding: 10px 0;
+
+      @include mobile {
+        width: 30px;
+        max-width: 30px;
+        min-width: 30px;
+        writing-mode: vertical-lr; /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+      }
     }
 
     ul {
-      margin-left: 40px;
       margin-bottom: 17px;
       border-left: 1px #ddd solid;
       padding-left: 40px;
@@ -322,3 +324,4 @@ img {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "post-theme";
 @import "highlights";
+@import "vcomment";
