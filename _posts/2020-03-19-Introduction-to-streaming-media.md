@@ -7,7 +7,7 @@ tags: ["泰康日记","Go","视频下载"]
 ---
 
 
-### 什么是流媒体
+### 什么是流媒体?
 
 > **流媒体**（英语：**Streaming media**）是指将一连串的[多媒体](https://zh.wikipedia.org/wiki/多媒體)数据压缩后，经过[互联网](https://zh.wikipedia.org/wiki/網際網路)分段发送数据，在互联网上即时传输影音以供观赏的一种技术与过程，此技术使得数据[数据包](https://zh.wikipedia.org/wiki/封包)得以像流水一样发送，如果不使用此技术，就必须在使用前[下载](https://zh.wikipedia.org/wiki/下载)整个媒体文件。
 
