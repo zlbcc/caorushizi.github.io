@@ -77,5 +77,5 @@ jobs:
       - name: 使用 qshell 执行上传命令
         run: |
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile && \
-          ./qshell qupload2 --src-dir=./site --bucket=zy-blogfile --check-hash --thread-count=5
+          ./qshell qupload2 --src-dir=./site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5
 
