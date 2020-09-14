@@ -51,7 +51,7 @@ jobs:
           echo '===============================================' && \
           cat refresh.txt && \
           echo '===============================================' && \
-          cat success.txt | awk '{printf "https://www.blog.ziying.site/%s\n", $2, $2}' | sed -e "s/index.html//" > refresh.txt && \
+          cat success.txt | awk '{printf "https://www.blog.ziying.site/%s\n", $2, $2}' | sed -e "s/index.html//" > refresh.www.txt && \
           echo '===============================================' && \
           echo '=                refresh.www.txt                  =' && \
           echo '===============================================' && \
