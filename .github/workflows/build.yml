@@ -35,7 +35,7 @@ jobs:
           name: site.zip
           path: site.zip
   deploy:
-    needs: [build-qshell, gen-blog-static-file]
+    needs: [gen-blog-static-file]
     runs-on: ubuntu-latest
     steps:
       - name: 下载 qshell 工具
