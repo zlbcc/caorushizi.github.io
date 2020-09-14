@@ -5,28 +5,6 @@ on:
     branches: [ master ]
 
 jobs:
-  build-qshell:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 安装 Go 1.13.1
-        uses: actions/setup-go@v2
-        with:
-          go-version: '^1.13.1'
-      - name: 将 qshell 源码检出
-        uses: actions/checkout@v2
-        with:
-          repository: 'qiniu/qshell'
-      - uses: actions/cache@v2
-        with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-      - name: 构建 qshell
-        run: go build -o qshell main.go
-      - name: 添加 artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: qshell
-          path: qshell
   gen-blog-static-file:
     runs-on: ubuntu-latest
     steps:
@@ -60,12 +38,8 @@ jobs:
     needs: [build-qshell, gen-blog-static-file]
     runs-on: ubuntu-latest
     steps:
-      - name: 下载生成的 qshell
-        uses: actions/download-artifact@v2
-        with:
-          name: qshell
       - name: 下载 qshell 工具
-        run: wget http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip
+        run: wget http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip -O qshell.zip && unzip qshell.zip
       - name: 查看目录文件
         run: ls
       - name: 给 qshell 权限
