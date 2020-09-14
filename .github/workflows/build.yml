@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  gen-blog-static-file:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: 安装 Ruby 2.6
@@ -39,5 +39,7 @@ jobs:
       - name: 使用 qshell 执行上传命令
         run: |
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile && \
-          ./qshell qupload2 --src-dir=./_site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5
+          ./qshell qupload2 --src-dir=./_site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5 --overwrite && \
+          cat success.txt | awk '{printf "http://blog.ziying.site/%s\n", $2}' > refresh.txt && \
+          ./qshell cdnrefresh -i refresh.txt
 
