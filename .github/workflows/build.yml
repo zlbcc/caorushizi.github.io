@@ -48,7 +48,7 @@ jobs:
           bundle config path vendor/bundle && \
           bundle add github-pages
       - name: 构建静态文件
-        run: bundle jekyll build
+        run: bundle exec jekyll build
       - name: 将 _site 文件夹重命名为 site ，并压缩该文件夹
         run: mv _site site && zip -r site.zip site
       - name: 添加 artifact
