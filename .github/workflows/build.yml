@@ -39,7 +39,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 下载 qshell 工具
-        run: wget http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip -O qshell.zip && unzip qshell.zip
+        run: |
+          wget http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip -O qshell.zip && \
+          unzip qshell.zip -o
       - name: 查看目录文件
         run: ls
       - name: 给 qshell 权限
