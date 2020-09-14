@@ -44,7 +44,8 @@ jobs:
         run: pwd
       - name: 使用 gem 安装 github-pages
         run: |
-          bundle config path vendor/bundle
+          bundle init && \
+          bundle config path vendor/bundle && \
           bundle add github-pages
       - name: 构建静态文件
         run: bundle jekyll build
