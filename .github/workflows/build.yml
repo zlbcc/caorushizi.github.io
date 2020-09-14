@@ -43,7 +43,9 @@ jobs:
       - name: 测试当前所处的文件夹
         run: pwd
       - name: 使用 gem 安装 github-pages
-        run: gem install --install-dir vendor/bundle github-pages
+        run: |
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3 github-pages
       - name: 构建静态文件
         run: jekyll build
       - name: 将 _site 文件夹重命名为 site ，并压缩该文件夹
