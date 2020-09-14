@@ -39,7 +39,7 @@ jobs:
       - name: 使用 qshell 执行上传命令
         run: |
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile && \
-          ./qshell qupload2 --src-dir=./_site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5 --overwrite && \
+          ./qshell qupload2 --src-dir=./_site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5 --overwrite --success-list=success.txt && \
           cat success.txt | awk '{printf "http://blog.ziying.site/%s\n", $2}' > refresh.txt && \
           ./qshell cdnrefresh -i refresh.txt
 
