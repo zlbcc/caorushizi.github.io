@@ -18,26 +18,13 @@ jobs:
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-      - name: 测试当前所处的文件夹
-        run: pwd
-      - name: 使用 gem 安装 github-pages
+      - name: 使用 bundle 安装 github-pages
         run: |
           bundle init && \
           bundle config path vendor/bundle && \
           bundle add github-pages
       - name: 构建静态文件
         run: bundle exec jekyll build
-      - name: 将 _site 文件夹重命名为 site ，并压缩该文件夹
-        run: mv _site site && zip -r site.zip site
-      - name: 添加 artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: site.zip
-          path: site.zip
-  deploy:
-    needs: [gen-blog-static-file]
-    runs-on: ubuntu-latest
-    steps:
       - name: 下载 qshell 工具
         run: |
           wget http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip -O qshell.zip && \
@@ -47,16 +34,10 @@ jobs:
         run: ls
       - name: 给 qshell 权限
         run: chmod +x qshell
-      - name: 下载生成的静态文件
-        uses: actions/download-artifact@v2
-        with:
-          name: site.zip
-      - name: 将网站静态文件解压
-        run: unzip ./site
       - name: 将 404 文件修改
-        run: mv ./site/errno-404.html ./site/errno-404
+        run: mv ./_site/errno-404.html ./_site/errno-404
       - name: 使用 qshell 执行上传命令
         run: |
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} blogfile && \
-          ./qshell qupload2 --src-dir=./site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5
+          ./qshell qupload2 --src-dir=./_site --bucket=zy-blogfile --check-exists --check-hash --thread-count=5
 
