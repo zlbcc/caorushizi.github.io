@@ -45,7 +45,7 @@ jobs:
           echo '===============================================' && \
           cat success.txt && \
           echo '===============================================' && \
-          cat success.txt | awk '{printf "https://blog.ziying.site/%s\nhttps://www.blog.ziying.site/%s\n", $2, $2}' > refresh.txt && \
+          cat success.txt | awk '{printf "https://blog.ziying.site/%s\n", $2, $2}' | sed -e "s/index.html//" > refresh.txt && \
           echo '===============================================' && \
           echo '=                refresh.txt                  =' && \
           echo '===============================================' && \
