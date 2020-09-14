@@ -1,12 +1,14 @@
 {% if site.vcomments %}
-  <div class="container">
-    <div id="vcomments"></div>
-    <script>
-      new Valine({
-        el: '#vcomments',
-        appId: '9rMjHbYxMgvBJNYyuIwaCM7N-gzGzoHsz',
-        appKey: 'ELMy5VeLOUE8evOKpQymntcI'
-      })
-    </script>
-  </div>
+<div id="vcomments"></div>
+<script>
+new Valine({
+  el: '#vcomments',
+  appId: '9rMjHbYxMgvBJNYyuIwaCM7N-gzGzoHsz',
+  appKey: 'ELMy5VeLOUE8evOKpQymntcI',
+  placeholder: '快来评论下吧～',
+  avatar: 'hide',
+  meta: ['nick', 'mail'],
+  requiredFields: ['nick']
+})
+</script>
 {% endif %}
