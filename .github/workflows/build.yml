@@ -8,14 +8,18 @@ jobs:
   build-qshell:
     runs-on: ubuntu-latest
     steps:
-      - name: 将 qshell 源码检出
-        uses: actions/checkout@v2
-        with:
-          repository: 'qiniu/qshell'
       - name: 安装 Go 1.13.1
         uses: actions/setup-go@v2
         with:
           go-version: '^1.13.1'
+      - name: 将 qshell 源码检出
+          uses: actions/checkout@v2
+          with:
+            repository: 'qiniu/qshell'
+      - uses: actions/cache@v2
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
       - name: 构建 qshell
         run: go build -o qshell main.go
       - name: 添加 artifact
@@ -26,16 +30,20 @@ jobs:
   gen-blog-static-file:
     runs-on: ubuntu-latest
     steps:
-      - name: 将 master 分支检出
-        uses: actions/checkout@v2
-      - name: 测试当前所处的文件夹
-        run: pwd
       - name: 安装 Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6
+      - name: 将 master 分支检出
+        uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+      - name: 测试当前所处的文件夹
+        run: pwd
       - name: 使用 gem 安装 github-pages
-        run: gem install github-pages
+        run: gem install --install-dir vendor/bundle github-pages
       - name: 构建静态文件
         run: jekyll build
       - name: 将 _site 文件夹重命名为 site ，并压缩该文件夹
