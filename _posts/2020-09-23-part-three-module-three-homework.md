@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "第三章模块三 Vuex 数据流管理及Vue.js 服务端渲染（SSR）"
-date: 2020-09-07 12:18:00 +0800
+date: 2020-09-23 15:31:00 +0800
 categories: ["大前端"]
 tags: ["泰康日记", "do homework"]
 ---
