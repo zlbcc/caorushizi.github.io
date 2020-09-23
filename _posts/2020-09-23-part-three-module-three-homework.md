@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "第三章模块二 Vue.js 源码剖析-响应式原理、虚拟 DOM、模板编译和组件化"
+title: "第三章模块三 Vuex 数据流管理及Vue.js 服务端渲染（SSR）"
 date: 2020-09-07 12:18:00 +0800
 categories: ["大前端"]
 tags: ["泰康日记", "do homework"]
