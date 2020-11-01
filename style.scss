@@ -22,6 +22,7 @@ body {
   max-width: 1050px;
   padding: 0 10px;
   width: 100%;
+  box-sizing: border-box;
 
   @include mobile {
     max-width: 90%;
