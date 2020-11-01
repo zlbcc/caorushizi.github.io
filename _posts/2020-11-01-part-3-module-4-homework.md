@@ -12,7 +12,7 @@ tags: ["泰康日记", "do homework"]
 - 实现左侧前四个侧边栏的效果和内容。
 - 项目地址 <https://github-laziji.github.io/#/user/new/main>
 
-![页面](http://static.ziying.site/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/3-4-1.png)
+![页面](https://static.ziying.site/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/3-4-1.png)
 
-- 仓库地址： <http://gitee.com/caorushizi/vblog>
+- 仓库地址： <https://gitee.com/caorushizi/vblog>
 - 预览：<http://ziying.site/vblog>
