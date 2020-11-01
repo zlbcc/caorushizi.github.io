@@ -14,5 +14,5 @@ tags: ["泰康日记", "do homework"]
 
 ![页面](http://static.ziying.site/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/3-4-1.png)
 
-- 仓库地址： <https://gitee.com/caorushizi/vblog>
+- 仓库地址： <http://gitee.com/caorushizi/vblog>
 - 预览：<http://ziying.site/vblog>
