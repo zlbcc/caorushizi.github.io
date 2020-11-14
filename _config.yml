@@ -21,7 +21,7 @@ footer-links:
   github: caorushizi
   rss: true # just type anything here for a working RSS icon
 
-paginate: 20
+paginate: 10
 paginate_path: "page:num"
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
