@@ -7,7 +7,8 @@ tags: ["Python"]
 ---
 
 
-![封面.png](https://upload-images.jianshu.io/upload_images/2607842-5e53b1e146ee5a25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://static.ziying.site/博客图片/20210126225510.webp)
+
 
 
 # 数据挖掘概况
