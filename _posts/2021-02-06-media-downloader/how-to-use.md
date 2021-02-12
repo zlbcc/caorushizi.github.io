@@ -8,7 +8,7 @@ tags: ["Electron"]
 
 ### 软件下载（暂时仅支持 windows ）
 
-下载链接：[media-downloader-windows-v0.0.1](http://static.ziying.site/media-downloader-1.0.0%20Setup.exe)
+下载链接：[media-downloader-windows-v1.0.0](http://static.ziying.site/media-downloader-1.0.0%20Setup.exe)
 
 源码地址：[github](https://github.com/caorushizi/media-downloader)
 
