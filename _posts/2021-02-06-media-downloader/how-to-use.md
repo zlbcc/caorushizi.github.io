@@ -3,7 +3,7 @@ layout: post
 title: "m3u8 视频下载（media downloader 使用说明）"
 date: 2021-02-06 20:23:00 +0800
 categories: ["我的开源软件"]
-tags: ["Electron"]
+tags: ["electron", "m3u8", "流媒体下载", "m3u8 download"]
 ---
 
 ### 软件下载（暂时仅支持 windows ）
