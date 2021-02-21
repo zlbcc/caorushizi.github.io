@@ -8,9 +8,10 @@ tags: ["electron", "m3u8", "流媒体下载", "m3u8 download"]
 
 ### 软件下载（暂时仅支持 windows ）
 
-下载链接：[media-downloader-windows-v1.0.0](http://static.ziying.site/media-downloader-1.0.0%20Setup.exe)
+- 2021.02.21 更新
 
-源码地址：[github](https://github.com/caorushizi/media-downloader)
+   [media-downloader-windows-v1.0.0](http://static.ziying.site/media-downloader-1.0.0%20Setup.exe)
+
 
 ### 使用说明
 
@@ -22,5 +23,7 @@ tags: ["electron", "m3u8", "流媒体下载", "m3u8 download"]
    ![操作说明-1.png](http://static.ziying.site/博客图片/20210213011623.png)
    ![操作说明-2.png](http://static.ziying.site/博客图片/20210213011700.png)
 3. 点击开始下载即可。
+
+[源码下载：https://github.com/caorushizi/media-downloader](https://github.com/caorushizi/media-downloader)
 
 <div style="color:red;font-size:30px;font-weight: bold;">使用中有什么问题欢迎在下面评论区留言</div>
