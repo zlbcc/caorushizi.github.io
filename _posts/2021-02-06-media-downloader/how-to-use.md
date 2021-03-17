@@ -27,6 +27,8 @@ tags: ["electron", "m3u8", "流媒体下载", "m3u8 download"]
    ![操作说明-2.png](http://static.ziying.site/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/52149880-7f1e-11eb-8231-759fb278b8a8.png)
 3. 点击开始下载即可。
 
+有什么问题也可以加我QQ哟：84996057
+
 ### 源码地址
 [Github：https://github.com/caorushizi/media-downloader](https://github.com/caorushizi/media-downloader)
 
