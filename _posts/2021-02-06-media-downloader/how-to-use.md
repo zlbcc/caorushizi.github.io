@@ -35,10 +35,10 @@ tags: ["electron", "m3u8", "流媒体下载", "m3u8 download"]
    - 第一种方式：可以使用浏览器抓包，获取抓包后的m3u8地址，填上视频的名称。
    - **第二种方式：可以使用打开浏览器，再页面地址栏中输入想要观看的视频，届时首页中会出现m3u8链接地址，点击可以带出请求地址、请求标头和视频名称。（推荐）**
    
-   ![操作说明-1.png](http://static.ziying.site/downlaoder-home.png)
+   ![操作说明-1.png](http://static.ziying.site/2021-04-29-home.png)
    ![操作说明-2.png](http://static.ziying.site/downloader-browser.png)
-   ![操作说明-2.png](http://static.ziying.site/downloader-fav.png)
-   ![操作说明-2.png](http://static.ziying.site/downloader-setting.png)
+   ![操作说明-2.png](http://static.ziying.site/2021-04-29-fav.png)
+   ![操作说明-2.png](http://static.ziying.site/2021-04-29-setting.png)
    
 3. 点击开始下载即可。
 
