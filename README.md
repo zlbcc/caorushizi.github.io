@@ -36,6 +36,6 @@ bundle exec jekyll s
 
 - https://chirpy.cotes.page/posts/write-a-new-post/
 
-# 图片剪切
+## 图片剪切
 
 - https://realfavicongenerator.net/
