@@ -1,81 +1,74 @@
+---
+layout: compress
+# Default layout
+---
+
 <!DOCTYPE html>
-<html>
-<head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  {% include meta.html %}
+{% include lang.html %}
 
-  <!--[if lt IE 9]>
-  <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <![endif]-->
+{% include assets-origin.html %}
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css"/>
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
-        href="{{ site.baseurl }}/feed.xml"/>
-  <script src="https://cdn.bootcdn.net/ajax/libs/valine/1.4.14/Valine.min.js"></script>
-  <script src="//at.alicdn.com/t/font_2257361_p4smwjkzojc.js"></script>
-</head>
+{% capture prefer_mode %}
+  {% if site.theme_mode %}
+    data-mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
 
-<body>
-<div class="wrapper-masthead">
-  <div class="container">
-    <header class="masthead">
-      <div class="site-info">
-        <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-        <p class="site-description">{{ site.description }}</p>
+<html lang="{{ site.lang }}"{{ prefer_mode }}>
+
+  {% include head.html %}
+
+  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+
+    {% include sidebar.html %}
+
+    {% include topbar.html %}
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div id="main" class="container pl-xl-4 pr-xl-4">
+
+        {{ content }}
+
+        {% include footer.html %}
+
       </div>
 
-      <nav>
+      {% include search-results.html %}
 
-        {% if page.name != "archive.html" and page.name != "categories.html" and page.name != "tags.html" and page.name != "about.html" %}
-          <a class="current" href="{{ site.baseurl }}/">博客</a>
-        {% else %}
-          <a href="{{ site.baseurl }}/">博客</a>
-        {% endif %}
+    </div> <!-- #main-wrapper -->
 
-        {% if page.name == "archive.html" %}
-          <a class="current" href="{{ site.baseurl }}/archive">归档</a>
-        {% else %}
-          <a href="{{ site.baseurl }}/archive">归档</a>
-        {% endif %}
+    {% if page.mermaid %}
+      {% include mermaid.html %}
+    {% endif %}
 
-        {% if page.name == "categories.html" %}
-          <a class="current" href="{{ site.baseurl }}/categories">分类</a>
-        {% else %}
-          <a href="{{ site.baseurl }}/categories">分类</a>
-        {% endif %}
+    <div id="mask"></div>
 
-        {% if page.name == "tags.html" %}
-          <a class="current" href="{{ site.baseurl }}/tags">标签</a>
-        {% else %}
-          <a href="{{ site.baseurl }}/tags">标签</a>
-        {% endif %}
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
 
-        {% if page.name == "about.html" %}
-          <a class="current" href="{{ site.baseurl }}/about">关于</a>
-        {% else %}
-          <a href="{{ site.baseurl }}/about">关于</a>
-        {% endif %}
+    {% if site.pwa.enabled %}
+      <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+        data-animation="true" data-autohide="false">
+        <div class="toast-header">
+          <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body text-center pt-0">
+          <p class="pl-2 pr-2 mb-3">{{ site.data.locales[lang].notification.update_found }}</p>
+          <button type="button" class="btn btn-primary" aria-label="Update">
+            {{ site.data.locales[lang].notification.update }}
+          </button>
+        </div>
+      </div>
+    {% endif %}
 
-      </nav>
-    </header>
-  </div>
-</div>
+    {% include search-loader.html %}
 
-<main id="main" role="main" class="container">
-  {{ content }}
-</main>
+    {% include js-selector.html %}
 
-<div class="wrapper-footer">
-  <div class="container">
-    <footer class="footer">
-      &copy; 2021 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">京ICP备2021032408号</a><br>
-      {% include svg-icons.html %} ｜ <a href="http://www.platformzero.cn" target="_blank">零号站台</a>
-    </footer>
-  </div>
-</div>
+  </body>
 
-{% include analytics.html %}
-
-</body>
 </html>
