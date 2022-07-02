@@ -810,7 +810,7 @@ $sidebar-display: "sidebar-display";
   } /* ul */
 
   .sidebar-bottom {
-    margin-bottom: 2.1rem;
+    margin-bottom: 0.5rem;
 
     @include ml-mr(auto);
     @include pl-pr(1rem);
@@ -858,6 +858,13 @@ $sidebar-display: "sidebar-display";
       border-radius: 50%;
     }
   } /* .sidebar-bottom */
+  // 备案号
+  .recordNo {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 14px;
+  }
 } /* #sidebar */
 
 @media (hover: hover) {

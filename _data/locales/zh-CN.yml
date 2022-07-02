@@ -36,8 +36,8 @@ copyright:
 
   # Displayed in the footer
   brief:
-    RecordNo: 京ICP备2021032408号
-    link: https://beian.miit.gov.cn/#/Integrated/index
+    # RecordNo: 京ICP备2021032408号
+    # link: https://beian.miit.gov.cn/#/Integrated/index
   # verbose: >-
   #   除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。
 

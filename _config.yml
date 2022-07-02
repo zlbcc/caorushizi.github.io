@@ -27,6 +27,11 @@ inforMation:
   qq: 2728104544
   describe: （补充一条，本人单身）
 
+# 备案号
+brief:
+  RecordNo: 京ICP备2021032408号
+  link: https://beian.miit.gov.cn/#/Integrated/index
+
 description: >- # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
