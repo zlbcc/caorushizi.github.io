@@ -6,7 +6,7 @@
 name: zlbcc的博客
 
 # Short bio or description (displayed in the header)
-description: zlbcc
+description: 博客迁移中，即将下线
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar:
@@ -58,7 +58,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
-    css_class: 'code-highlight'
+    css_class: "code-highlight"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
